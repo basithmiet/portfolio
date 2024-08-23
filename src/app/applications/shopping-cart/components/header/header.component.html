@@ -1,0 +1,16 @@
+<header>
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size: 35px;" class="ms-1 mt-1 fa fa-truck" (click)="redirectTo('/applications/shopping-cart/products')">&nbsp;</i>
+            <strong (click)="redirectTo('/applications/shopping-cart/products')" style="font-size: 30px;">Shopping cart</strong>
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+            </div>
+            <span class="fa fa-search search-icon"></span>
+        </div>
+        <button (click)="redirectTo('/applications/shopping-cart/cart')" class="btn btn-primary">
+            <i style="font-size: 30px;" class="fa fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+    </div>
+</header>
